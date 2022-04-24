@@ -12,4 +12,15 @@ export class ColorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  red() {
+    this.color="red";
+  }
+
+  yellow() {
+    this.color="yellow";
+  }
+
+  blue() {
+    this.color="blue";
+  }
 }
