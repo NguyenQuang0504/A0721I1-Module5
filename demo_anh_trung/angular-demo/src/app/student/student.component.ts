@@ -8,7 +8,6 @@ import {StudentDao} from "../modelDao/StudentDao";
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
-  student:IStudent[] = StudentDao.students;
   constructor() { }
 
   ngOnInit(): void {
