@@ -1,8 +1,10 @@
-<div>
-  <center>
-    <h1>Details</h1>
-  </center>
+<h1>Details</h1>
+<div *ngIf="student; then block else fail "></div>
+  <ng-template #block>
   <h3>Id: {{student.id}}</h3>
   <h3>Name: {{student.name}}</h3>
   <h3>Mark: {{student.mark}}</h3>
-</div>
+  </ng-template>
+  <ng-template #fail>
+    <div>Undefine</div>
+  </ng-template>

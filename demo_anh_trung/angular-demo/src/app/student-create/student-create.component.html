@@ -1,16 +1,16 @@
 <div class="col">
   <h2>Form create</h2>
-  Id: <input type="text" placeholder="Nhap id">
+  Id: <input #id type="number" placeholder="Nhap id">
   <br>
-  Name: <input type="text" placeholder="Nhap name">
+  Name: <input #name type="text" placeholder="Nhap name">
   <br>
-  Gender: <input name="gender" type="radio" >Nam
-  <input name="gender" type="radio">Nu
-  <input name="gender" type="radio">LGBT
+  Gender: <input #gender1 value="1" name="gender" type="radio" >Nam
+  <input #gender2 value="0" name="gender" type="radio">Nu
+  <input #gender3 value="2" name="gender" type="radio">LGBT
   <br>
-  Mark: <input type="text" placeholder="Nhap mark">
+  Mark: <input #mark type="number" placeholder="Nhap mark">
   <br>
-  Address: <input type="text" placeholder="Nhap address">
+  Address: <input #address type="text" placeholder="Nhap address">
   <br>
-  <button type="button" class="btn btn-primary">Create</button>
+  <button type="button" class="btn btn-primary" (click)="getData(id.value, name.value, gender1.checked ? gender1.value : gender2.checked ? gender2.value : gender3.value, mark.value, address.value )">Create</button>
 </div>
