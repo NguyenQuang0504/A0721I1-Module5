@@ -1,0 +1,4 @@
+<h1>Rating Bar</h1>
+<h3>Rating current: {{value}}</h3>
+<br>
+<app-voted-child (rating)="setData($event)" [input]="value"></app-voted-child>

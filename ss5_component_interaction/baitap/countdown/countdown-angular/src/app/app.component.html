@@ -1,0 +1,4 @@
+<app-countdown (finish)="getData($event)" ></app-countdown>
+<h1 *ngIf="value; then display else hide"></h1>
+<ng-template #display><h2>Happy New Year!!!</h2></ng-template>
+<ng-template #hide></ng-template>
