@@ -1,5 +1,7 @@
 <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
   <div *ngFor="let item of rating" class="btn-group" role="group" aria-label="First group">
-    <button (click)="sendData(item.value)" [ngStyle]="{'background-color': item.active ? 'yellow': 'white'}" type="button" class="btn btn-outline-secondary">{{item.value}}</button>
+    <button  (click)="sendData(item.value)" [ngStyle]="{'background-color': item.active ? 'yellow': 'white'}" type="button" class="btn btn-outline-secondary">{{item.value}}</button>
   </div>
 </div>
+
+

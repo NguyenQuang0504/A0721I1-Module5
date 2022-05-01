@@ -12,7 +12,6 @@ export class VotedChildComponent implements OnInit {
   constructor() { }
   @Output("rating") value = new EventEmitter<number>();
   ngOnInit(): void {
-
   }
   sendData(value: number) {
   this.value.emit(value);
@@ -24,3 +23,4 @@ export class VotedChildComponent implements OnInit {
     }
   }
 }
+
