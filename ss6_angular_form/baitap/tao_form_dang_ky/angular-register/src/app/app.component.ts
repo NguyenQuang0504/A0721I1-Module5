@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Users} from "./Users";
+import {IUsers} from "./IUsers";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-register';
+  users:IUsers[] = Users.user;
 }

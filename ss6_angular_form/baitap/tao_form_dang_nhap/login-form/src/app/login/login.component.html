@@ -1,0 +1,26 @@
+<div>
+    <h1 style="text-align: center">Login Page</h1>
+</div>
+<div class="container" style="width: 70%;">
+  <form [formGroup]="formLogin" (ngSubmit)="login()">
+    <div class="row mb-3">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="inputEmail3" formControlName="email">
+      </div>
+      <div *ngIf="!formLogin.get('email')?.valid && formLogin.get('email')?.touched">
+        <p class="text-danger">Vui long nhap lai email</p>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="inputPassword3" formControlName="password">
+      </div>
+      <div *ngIf="!formLogin.get('password').valid && formLogin.get('password')?.touched">
+        <p>Nhập lại password</p>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!formLogin.valid">Sign in</button>
+  </form>
+</div>
