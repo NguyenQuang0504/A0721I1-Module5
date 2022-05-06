@@ -1,0 +1,93 @@
+<div>
+  <h1>Crerate-form-template</h1>
+</div>
+<div *ngIf="studentUpdate1; then display else hide"></div>
+<ng-template #display>
+  <form class="row g-3 needs-validation" novalidate #formTemplate1="ngForm" (ngSubmit)="save(formTemplate1)">
+    <div class="mb-3">
+      <label class="form-label">Id</label>
+      <input  type="text" class="form-control" placeholder="Example input placeholder"
+             [(ngModel)]="studentUpdate1.id"
+             name="id"
+      >
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input  type="text" class="form-control" placeholder="Another input placeholder"
+             [(ngModel)]="studentUpdate1.name"
+             name="name"
+      >
+    </div>
+    <div>
+      Gender: <input value="1" name="gender" type="radio" [(ngModel)]="studentUpdate1.gender">Nam
+      <input value="0" name="gender" type="radio"
+             [(ngModel)]="studentUpdate1.gender"
+      >Nu
+      <input value="2" name="gender" type="radio"
+             [(ngModel)]="studentUpdate1.gender"
+      >LGBT
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Mark</label>
+      <input  type="text" class="form-control" placeholder="Example input placeholder"
+             [(ngModel)]="studentUpdate1.mark"
+             name="mark"
+      >
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Address</label>
+      <input  type="text" class="form-control" placeholder="Another input placeholder"
+             [(ngModel)]="studentUpdate1.address"
+             name="address"
+      >
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</ng-template>
+<ng-template #hide>
+  <form class="row g-3 needs-validation" novalidate #formTemplate="ngForm" (ngSubmit)="save(formTemplate)">
+    <div class="mb-3">
+      <label class="form-label">Id</label>
+      <input type="text" class="form-control" placeholder="Example input placeholder"
+             ngModel
+             name="id"
+      >
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" placeholder="Another input placeholder"
+             ngModel
+             name="name"
+      >
+    </div>
+    <div>
+      Gender: <input ngModel value="1" name="gender" type="radio">Nam
+      <input value="0" name="gender" type="radio"
+             ngModel
+      >Nu
+      <input value="2" name="gender" type="radio"
+             ngModel
+      >LGBT
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Mark</label>
+      <input type="text" class="form-control" placeholder="Example input placeholder"
+             ngModel
+             name="mark"
+      >
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Address</label>
+      <input type="text" class="form-control" placeholder="Another input placeholder"
+             ngModel
+             name="address"
+      >
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</ng-template>
+

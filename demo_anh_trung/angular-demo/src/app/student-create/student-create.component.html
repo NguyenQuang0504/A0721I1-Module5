@@ -1,16 +1,40 @@
 <div class="col">
   <h2>Form create</h2>
-  Id: <input #id type="number" placeholder="Nhap id">
-  <br>
-  Name: <input #name type="text" placeholder="Nhap name">
-  <br>
-  Gender: <input #gender1 value="1" name="gender" type="radio" >Nam
-  <input #gender2 value="0" name="gender" type="radio">Nu
-  <input #gender3 value="2" name="gender" type="radio">LGBT
-  <br>
-  Mark: <input #mark type="number" placeholder="Nhap mark">
-  <br>
-  Address: <input #address type="text" placeholder="Nhap address">
-  <br>
-  <button type="button" class="btn btn-primary" (click)="getData(id.value, name.value, gender1.checked ? gender1.value : gender2.checked ? gender2.value : gender3.value, mark.value, address.value )">Create</button>
+  <div *ngIf="studentUpdate; then display else hide"></div>
+  <ng-template #display>
+    Id: <input #id type="number" placeholder="Nhap id" value="{{studentUpdate.id}}">
+    <br>
+    Name: <input #name type="text" placeholder="Nhap name" value="{{studentUpdate.name}}">
+    <br>
+    Gender: <input #gender1 value="1" name="gender" type="radio" >Nam
+    <input #gender2 value="0" name="gender" type="radio">Nu
+    <input #gender3 value="2" name="gender" type="radio">LGBT
+    <br>
+    Mark: <input #mark type="number" placeholder="Nhap mark" value="{{studentUpdate.mark}}">
+    <br>
+    Address: <input #address type="text" placeholder="Nhap address" value="{{studentUpdate.address}}">
+    <br>
+    <button type="button" class="btn btn-primary"
+            (click)="getData(id.value, name.value, gender1.checked ? gender1.value : gender2.checked ? gender2.value : gender3.value, mark.value, address.value )">
+      Create
+    </button>
+  </ng-template>
+  <ng-template #hide>
+    Id: <input #id type="number" placeholder="Nhap id">
+    <br>
+    Name: <input #name type="text" placeholder="Nhap name">
+    <br>
+    Gender: <input #gender1 value="1" name="gender" type="radio">Nam
+    <input #gender2 value="0" name="gender" type="radio">Nu
+    <input #gender3 value="2" name="gender" type="radio">LGBT
+    <br>
+    Mark: <input #mark type="number" placeholder="Nhap mark">
+    <br>
+    Address: <input #address type="text" placeholder="Nhap address">
+    <br>
+    <button type="button" class="btn btn-primary"
+            (click)="getData(id.value, name.value, gender1.checked ? gender1.value : gender2.checked ? gender2.value : gender3.value, mark.value, address.value )">
+      Create
+    </button>
+  </ng-template>
 </div>

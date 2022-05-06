@@ -9,6 +9,7 @@ import {IStudent} from "../student/IStudent";
 export class StudentCreateComponent implements OnInit {
   student:IStudent | undefined;
   @Output() studentCreate = new EventEmitter<IStudent>();
+  @Input() studentUpdate:IStudent;
   constructor() { }
 
   ngOnInit(): void {
@@ -23,6 +24,5 @@ export class StudentCreateComponent implements OnInit {
       address : value4
     }
     this.studentCreate.emit(this.student);
-    console.log(this.student);
   }
 }

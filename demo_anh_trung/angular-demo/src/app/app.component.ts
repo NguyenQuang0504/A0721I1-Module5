@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {IStudent} from "./student/IStudent";
+import {StudentDao} from "./modelDao/StudentDao";
 
 @Component({
   selector: 'app-root',
@@ -7,37 +8,9 @@ import {IStudent} from "./student/IStudent";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  student: IStudent[] = [
-    {
-      id: 1,
-      name: "Nguyen Van Quang",
-      gender: 1,
-      mark: 80,
-      address: "Hue"
-    },
-    {
-      id: 2,
-      name: "Nguyen Van Tuan",
-      gender: 1,
-      mark: 30,
-      address: "Da Nang"
-    },
-    {
-      id: 3,
-      name: "Duong Thi Thuy",
-      gender: 0,
-      mark: 100,
-      address: "TP Ho Chi Minh"
-    },
-    {
-      id: 5,
-      name: "Nguyen Van Anh",
-      gender: 2,
-      mark: 20,
-      address: "Quang Nam"
-    }
-  ]
+  student: IStudent[] = StudentDao.students;
   student1:IStudent | undefined;
+  studentUpdate:IStudent;
   title = 'angular-demo';
 
   getStudent(item:IStudent) {
@@ -45,6 +18,21 @@ export class AppComponent {
   }
 
   showData(value1: IStudent) {
-    this.student.unshift(value1)
+    console.log(value1)
+    let check:boolean = true;
+    for (let i:number = 0;i<this.student.length;i++){
+      if (this.student[i].id===value1.id){
+        check = false;
+        this.student[i] = value1;
+        break;
+      }
+    }
+    if (check) {
+      this.student.unshift(value1);
+    }
+  }
+
+  updateStudent(item: IStudent) {
+    this.studentUpdate = item;
   }
 }

@@ -1,40 +1,48 @@
 <div class="row" style="background-color: aquamarine">
-<div class="col-6">
-  <h1>List Student</h1>
-  <table class="table table-striped">
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Gender</th>
-      <th>Mark</th>
-      <th>Address</th>
-      <td>Feature</td>
-    </tr>
-    <tr *ngFor="let item of student; index as i">
-      <td>{{i + 1}}</td>
-      <td [ngStyle]="{'color' : item.gender==2? 'red': ''}">{{item.name | titlecase}}</td>
-      <td [ngSwitch]="item.gender">
-        <span *ngSwitchCase="0">Female</span>
-        <span *ngSwitchCase="1">Male</span>
-        <span *ngSwitchDefault>LGBT</span>
-      </td>
-      <div *ngIf="item.mark>=50; then Pass else Fail"></div>
-      <ng-template #Pass>Pass</ng-template>
-      <ng-template #Fail>Fail</ng-template>
-      <td>{{item.address}}</td>
-      <td>
-        <button type="button" (click)="getStudent(item)">Detail</button>
-        <button type="button">Delete</button>
-      </td>
-    </tr>
-  </table>
+  <div class="col-6">
+    <h1>List Student</h1>
+    <table class="table table-striped">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Mark</th>
+        <th>Address</th>
+        <td>Feature</td>
+      </tr>
+      <tr *ngFor="let item of student; index as i">
+        <td>{{i + 1}}</td>
+        <td [ngStyle]="{'color' : item.gender==2? 'red': ''}">{{item.name | titlecase}}</td>
+        <td [ngSwitch]="item.gender">
+          <span *ngSwitchCase="0">Female</span>
+          <span *ngSwitchCase="1">Male</span>
+          <span *ngSwitchDefault>LGBT</span>
+        </td>
+        <div *ngIf="item.mark>=50; then Pass else Fail"></div>
+        <ng-template #Pass>Pass</ng-template>
+        <ng-template #Fail>Fail</ng-template>
+        <td>{{item.address}}</td>
+        <td>
+          <button type="button" (click)="getStudent(item)">Detail</button>
+          <button type="button" (click)="updateStudent(item)">Update</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="col-6">
+    <app-student-detail [student-detail]="student1"></app-student-detail>
+  </div>
 </div>
-<div class="col-6">
-  <app-student-detail [student-detail]="student1"></app-student-detail>
-</div>
-</div>
-<div class="row mt-4">
-  <app-student-create (studentCreate)="showData($event)"></app-student-create>
+<div class="row input-group">
+  <div class="col-4">
+    <app-student-create [studentUpdate]="studentUpdate" (studentCreate)="showData($event)"></app-student-create>
+  </div>
+  <div class="col-4">
+    <app-create-template-form [update]="studentUpdate"></app-create-template-form>
+  </div>
+  <div class="col-4">
+    <app-create-reactive-form [update]="studentUpdate"></app-create-reactive-form>
+  </div>
 </div>
 
 
