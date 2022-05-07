@@ -1,5 +1,4 @@
-<div *ngIf="product; then display else hide"></div>
-<ng-template #display class="container mt-4" >
+<div class="container mt-4" >
   <h3>Create</h3>
   <form [formGroup]="product1" (ngSubmit)="save()">
     <div hidden class="input-group input-group-sm mb-3">
@@ -22,7 +21,6 @@
       <input [(ngModel)]="product.description" type="text" class="form-control" aria-label="Sizing example input" formControlName="description">
     </div>
     <p *ngIf="!product1.get('description')?.valid && product1.get('description').touched" class="text-danger">Description sai</p>
-    <button type="submit" [disabled]="!product1.valid">Create</button>
+    <button type="submit" [disabled]="!product1.valid">Update</button>
   </form>
-</ng-template>
-<ng-template #hide></ng-template>
+</div>

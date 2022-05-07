@@ -43,7 +43,7 @@ export class ProductServiceService {
 
   findById(id: any) {
     for (let i:number = 0;i<this.products.length;i++){
-      if (this.products[i].id===id){
+      if (this.products[i].id==id){
         return this.products[i];
       }
     }
@@ -54,6 +54,17 @@ export class ProductServiceService {
     for (let i:number = 0;i<this.products.length;i++){
       if (this.products[i].id===product1.id){
         this.products[i] = product1;
+      }
+    }
+  }
+
+  delete(id: number) {
+    for (let i:number = 0;i<this.products.length;i++){
+      if (this.products[i].id==id){
+        for (let j=i;j<this.products.length;j++){
+          this.products[j] = this.products[j+1];
+        }
+        this.products.pop();
       }
     }
   }
