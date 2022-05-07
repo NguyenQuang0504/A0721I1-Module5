@@ -21,9 +21,9 @@
     </div>
     <div>
 
-      Gender: <input value="1" name="gender" type="radio" formControlName="gender" >Nam
-      <input value="0" name="gender" type="radio" formControlName="gender">Nu
-      <input value="2" name="gender" type="radio" formControlName="gender">LGBT
+      Gender: <input value="1"  name="gender" type="radio" formControlName="gender" >Nam
+      <input value="0"  name="gender" type="radio" formControlName="gender">Nu
+      <input value="2" checked name="gender" type="radio" formControlName="gender">LGBT
       <div *ngIf="!reactive.get('gender')?.valid && reactive.get('gender').untouched">
         <p class="text-danger">Khong duoc de trong gender</p>
       </div>
