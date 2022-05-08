@@ -10,7 +10,7 @@ import { FuramaServiceComponent } from './furama-service/furama-service.componen
 import { FuramaEmployeeComponent } from './furama-employee/furama-employee.component';
 import { FuramaCustomerComponent } from './furama-customer/furama-customer.component';
 import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import {ReactiveFormsModule} from "@angular/forms";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
