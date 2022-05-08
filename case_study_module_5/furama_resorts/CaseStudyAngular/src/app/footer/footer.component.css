@@ -1,0 +1,15 @@
+.card-footer{
+  height: auto;
+}
+.card-footer h4{
+  text-align: center;
+  font-weight: 600;
+  font-family: sans-serif;
+}
+.card-footer h5{
+  font-weight: 500;
+  font-family: sans-serif;
+}
+.col-3 ol{
+  margin-top: 50px;
+}

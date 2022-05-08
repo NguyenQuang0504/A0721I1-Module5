@@ -1,0 +1,25 @@
+<div style="margin-top: 30px" class="row container">
+  <h2>List Employee</h2>
+  <table class="table table-striped">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Position</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let item of employee; index as i">
+      <td>{{i+1}}</td>
+      <td>{{item.name}}</td>
+      <td>{{item.date}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.phone}}</td>
+      <td>{{item.position}}</td>
+      <td><button [routerLink]="['/employee/update', item.cccd]">Update</button></td>
+      <td><button (click)="delete(item.cccd)" >Delete</button></td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+  <h3>Create</h3>
+  <form [formGroup]="employee1" (ngSubmit)="save()">
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text">Name</span>
+      <input [(ngModel)]="employee.name" type="text" class="form-control" aria-label="Sizing example input" formControlName="name" >
+    </div>
+<!--    <p *ngIf="!product1.get('id')?.valid && product1.get('id').touched" class="text-danger">Nhap id</p>-->
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" >Date</span>
+      <input [(ngModel)]="employee.date" type="date" class="form-control" aria-label="Sizing example input" formControlName="date" >
+    </div>
+<!--    <p *ngIf="!product1.get('name')?.valid && product1.get('name').touched" class="text-danger">Nhap name</p>-->
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" >Phone</span>
+      <input [(ngModel)]="employee.phone" type="text" class="form-control" aria-label="Sizing example input" formControlName="phone">
+    </div>
+<!--    <p *ngIf="!product1.get('price')?.valid && product1.get('price').touched" class="text-danger">Name price</p>-->
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" >CCCD</span>
+      <input [(ngModel)]="employee.cccd" type="text" class="form-control" aria-label="Sizing example input" formControlName="cccd">
+    </div>
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" >Email</span>
+      <input [(ngModel)]="employee.email" type="text" class="form-control" aria-label="Sizing example input" formControlName="email">
+    </div>
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" >Level</span>
+      <input [(ngModel)]="employee.level" type="text" class="form-control" aria-label="Sizing example input" formControlName="level">
+    </div>
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" >Position</span>
+      <input [(ngModel)]="employee.position" type="text" class="form-control" aria-label="Sizing example input" formControlName="position">
+    </div>
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" >Salary</span>
+      <input [(ngModel)]="employee.salary" type="text" class="form-control" aria-label="Sizing example input" formControlName="salary">
+    </div>
+    <button type="submit">Update</button>
+  </form>
+</div>
