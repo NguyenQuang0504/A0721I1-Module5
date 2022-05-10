@@ -47,7 +47,7 @@ export class ServiceEmployeeService {
   }
 
   findByCCCD(cccd: string) {
-    for(let i = 0; i < this.employee.length; i++) {
+    for ( let i = 0; i < this.employee.length; i++) {
       if (this.employee[i].cccd === cccd) {
         return this.employee[i];
       }
@@ -61,5 +61,9 @@ export class ServiceEmployeeService {
         this.employee[i] = employee1;
       }
     }
+  }
+
+  create(employee: IEmployee) {
+    this.employee.push(employee);
   }
 }

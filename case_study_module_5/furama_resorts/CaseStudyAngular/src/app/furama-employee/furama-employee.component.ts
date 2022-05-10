@@ -8,11 +8,10 @@ import {ServiceEmployeeService} from '../service/service-employee.service';
   styleUrls: ['./furama-employee.component.css']
 })
 export class FuramaEmployeeComponent implements OnInit {
-  employee: IEmployee[] = this._service.findAll();
+  employee: IEmployee[] = this.service.findAll();
 
   constructor(
-    // tslint:disable-next-line:variable-name
-    private _service: ServiceEmployeeService
+    private service: ServiceEmployeeService
   ) {
   }
 
