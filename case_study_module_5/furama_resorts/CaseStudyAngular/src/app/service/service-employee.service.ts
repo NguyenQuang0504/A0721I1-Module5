@@ -1,6 +1,9 @@
 import {Injectable} from '@angular/core';
 import {IEmployee} from '../model/IEmployee';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
+const API_URL = 'http://localhost:3000';
 
 @Injectable({
   providedIn: 'root'
@@ -39,31 +42,27 @@ export class ServiceEmployeeService {
     }
   ];
 
-  constructor() {
+  // tslint:disable-next-line:variable-name
+  constructor(private _httpClient: HttpClient) {
   }
 
-  findAll() {
-    return this.employee;
+  delete(id: number): Observable<IEmployee> {
+    return this._httpClient.delete<IEmployee>(API_URL + '/employee' + '/' + id);
   }
 
-  findByCCCD(cccd: string) {
-    for ( let i = 0; i < this.employee.length; i++) {
-      if (this.employee[i].cccd === cccd) {
-        return this.employee[i];
-      }
-    }
-    return undefined;
+  findAll(): Observable<IEmployee[]> {
+    return this._httpClient.get<IEmployee[]>(API_URL + '/employee');
   }
 
-  update(employee1: IEmployee) {
-    for (let i = 0; i < this.employee.length; i++) {
-      if (this.employee[i].cccd === employee1.cccd) {
-        this.employee[i] = employee1;
-      }
-    }
+  findById(id: number): Observable<IEmployee> {
+    return this._httpClient.get<IEmployee>(API_URL + '/employee' + '/' + id);
   }
 
-  create(employee: IEmployee) {
-    this.employee.push(employee);
+  update(id: number, employee1): Observable<IEmployee> {
+    return this._httpClient.put<IEmployee>(API_URL + '/employee/'+id, employee1);
+  }
+
+  create(employee: IEmployee): Observable<IEmployee> {
+    return this._httpClient.post<IEmployee>(API_URL + '/employee', employee);
   }
 }

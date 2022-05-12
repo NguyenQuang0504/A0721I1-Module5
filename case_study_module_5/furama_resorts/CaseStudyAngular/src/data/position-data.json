@@ -1,0 +1,10 @@
+{
+  "position": [
+    {"id": 1, "namePosition": "Le tan"},
+    {"id": 2, "namePosition": "Phuc vu"},
+    {"id": 3, "namePosition": "Chuyen vien"},
+    {"id": 4, "namePosition": "Giam sat"},
+    {"id": 5, "namePosition": "Quan ly"},
+    {"id": 6, "namePosition": "Giam doc"}
+  ]
+}

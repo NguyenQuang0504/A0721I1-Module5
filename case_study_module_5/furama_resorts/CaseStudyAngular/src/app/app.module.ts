@@ -12,6 +12,7 @@ import { FuramaCustomerComponent } from './furama-customer/furama-customer.compo
 import { EmployeeUpdateComponent } from './employee-update/employee-update.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { CreateEmployeeComponent } from './create-employee/create-employee.compo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

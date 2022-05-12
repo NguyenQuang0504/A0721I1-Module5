@@ -1,36 +1,56 @@
 <div class="container" *ngIf="employee">
   <h3>Create</h3>
   <form [formGroup]="employee1" (ngSubmit)="save()">
+    <input type="hidden" [value]="employee.id" formControlName="id">
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text">Name</span>
       <input [(ngModel)]="employee.name" type="text" class="form-control" aria-label="Sizing example input" formControlName="name" >
     </div>
-<!--    <p *ngIf="!product1.get('id')?.valid && product1.get('id').touched" class="text-danger">Nhap id</p>-->
+    <div *ngIf="!employee1.get('name')?.valid && employee1.get('name').touched">
+      <p *ngIf="employee1.get('name').errors.required" class="text-danger">Nhap ten</p>
+      <p *ngIf="employee1.get('name').errors.minlength" class="text-danger">Vui long nhap lon hon 6 ky tu</p>
+    </div>
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text" >Date</span>
       <input [(ngModel)]="employee.date" type="date" class="form-control" aria-label="Sizing example input" formControlName="date" >
     </div>
-<!--    <p *ngIf="!product1.get('name')?.valid && product1.get('name').touched" class="text-danger">Nhap name</p>-->
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text" >Phone</span>
       <input [(ngModel)]="employee.phone" type="text" class="form-control" aria-label="Sizing example input" formControlName="phone">
     </div>
-<!--    <p *ngIf="!product1.get('price')?.valid && product1.get('price').touched" class="text-danger">Name price</p>-->
+    <div *ngIf="!employee1.get('phone').valid && employee1.get('phone').touched">
+      <p *ngIf="employee1.get('phone').errors.required" class="text-danger">Vui long nhap so dien thoai</p>
+      <p *ngIf="employee1.get('phone').errors.pattern" class="text-danger">SDT sai dinh dang</p>
+    </div>
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text" >CCCD</span>
       <input [(ngModel)]="employee.cccd" type="text" class="form-control" aria-label="Sizing example input" formControlName="cccd">
+    </div>
+    <div *ngIf="!employee1.get('cccd').valid && employee1.get('cccd').touched">
+      <p *ngIf="employee1.get('cccd').errors.required" class="text-danger">Vui long nhap CCCD</p>
+      <p *ngIf="employee1.get('cccd').errors.minlength || employee1.get('cccd').errors.maxlength" class="text-danger">Do
+        dai phai tu 10-12 so</p>
     </div>
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text" >Email</span>
       <input [(ngModel)]="employee.email" type="text" class="form-control" aria-label="Sizing example input" formControlName="email">
     </div>
+    <div *ngIf="!employee1.get('email').valid && employee1.get('email').touched">
+      <p *ngIf="employee1.get('email').errors.required" class="text-danger">Vui long nhap email</p>
+      <p *ngIf="employee1.get('email').errors.pattern" class="text-danger">Email sai ding dang</p>
+    </div>
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text" >Level</span>
-      <input [(ngModel)]="employee.level" type="text" class="form-control" aria-label="Sizing example input" formControlName="level">
+      <select formControlName="level" name="" [(ngModel)]="employee.level">
+        <option *ngFor="let item of level" [value]="item.nameLevel">{{item.nameLevel}}</option>
+      </select>
+<!--      <input [(ngModel)]="employee.level" type="text" class="form-control" aria-label="Sizing example input" formControlName="level">-->
     </div>
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text" >Position</span>
-      <input [(ngModel)]="employee.position" type="text" class="form-control" aria-label="Sizing example input" formControlName="position">
+      <select formControlName="position" name="" id="" [(ngModel)]="employee.position">
+        <option *ngFor="let item of position" [value]="item.namePosition">{{item.namePosition}}</option>
+      </select>
     </div>
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text" >Salary</span>

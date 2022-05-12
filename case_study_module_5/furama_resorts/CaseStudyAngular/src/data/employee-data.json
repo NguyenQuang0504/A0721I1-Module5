@@ -1,0 +1,48 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "Nguyen Van Quangg1",
+      "date": "2022-05-05",
+      "phone": "0397111634",
+      "cccd": "123456789",
+      "email": "quang10a3004@gmail.com",
+      "level": "Dai hoc",
+      "position": "Phuc vu",
+      "salary": "22222"
+    },
+    {
+      "id": 3,
+      "name": "Le Son Thien Hau",
+      "date": "2022-05-13",
+      "phone": "0911234333",
+      "cccd": "1222222222",
+      "email": "lesonthienhau@gmail.vn",
+      "level": "Trung Cap",
+      "position": "Chuyen vien",
+      "salary": "11111"
+    },
+    {
+      "id": 4,
+      "name": "Luong Duy Thach",
+      "date": "2022-05-19",
+      "phone": "0398765432",
+      "cccd": "2222222222",
+      "email": "thachluongduy@gmail.com",
+      "level": "Dai hoc",
+      "position": "Chuyen vien",
+      "salary": "1000000"
+    },
+    {
+      "id": 5,
+      "name": "QUanggg",
+      "date": "2022-05-20",
+      "phone": "0397961099",
+      "cccd": "9999999999",
+      "email": "quangquang@gmail.com",
+      "level": "Cao Dang",
+      "position": "Chuyen vien",
+      "salary": "11111"
+    }
+  ]
+}

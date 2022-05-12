@@ -7,7 +7,7 @@ import {CreateEmployeeComponent} from './create-employee/create-employee.compone
 
 const routes: Routes = [
   {path: 'employee', component: FuramaEmployeeComponent},
-  {path: 'employee/update/:cccd', component: EmployeeUpdateComponent},
+  {path: 'employee/update/:id', component: EmployeeUpdateComponent},
   {path: 'employee/create', component: CreateEmployeeComponent}
 ];
 

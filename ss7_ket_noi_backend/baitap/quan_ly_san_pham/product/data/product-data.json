@@ -2,7 +2,7 @@
   "product": [
     {
       "id": 4,
-      "name": "IPhone 8",
+      "name": "IPhone 844",
       "price": "754",
       "description": "98%",
       "category": "Iphone"
@@ -11,7 +11,8 @@
       "id": "7",
       "name": "hgfhg",
       "price": "2",
-      "description": "33"
+      "description": "33",
+      "category": "Xiaomi"
     },
     {
       "id": "9",

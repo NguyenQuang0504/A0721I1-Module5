@@ -2,21 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dc34911-fd4c-4927-85e1-f64d51781cad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/model/ILevelEmployee.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/model/IPositionEmployee.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudyAngular/src/data/employee-data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudyAngular/src/data/level-data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CaseStudyAngular/src/data/position-data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/create-employee/create-employee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/create-employee/create-employee.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/create-employee/create-employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/create-employee/create-employee.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/employee-update/employee-update.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/employee-update/employee-update.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/employee-update/employee-update.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/employee-update/employee-update.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/footer/footer.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/furama-employee/furama-employee.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/furama-employee/furama-employee.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/furama-employee/furama-employee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/furama-employee/furama-employee.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/furama-employee/furama-employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/furama-employee/furama-employee.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/header/header.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/model/IEmployee.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/model/IEmployee.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/service/service-employee.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/service/service-employee.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/tslint.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss7_ket_noi_backend/baitap/quan_ly_san_pham/product/data/product-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss7_ket_noi_backend/baitap/quan_ly_san_pham/product/data/product-data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ss7_ket_noi_backend/thuchanh/quan_ly_san_pham" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -73,6 +75,9 @@
       <workItem from="1652057391617" duration="3490000" />
       <workItem from="1652092270489" duration="4248000" />
       <workItem from="1652186259955" duration="722000" />
+      <workItem from="1652266827955" duration="5078000" />
+      <workItem from="1652274175767" duration="4410000" />
+      <workItem from="1652318617235" duration="6867000" />
     </task>
     <servers />
   </component>

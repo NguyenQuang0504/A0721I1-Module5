@@ -12,14 +12,18 @@
       <th>Delete</th>
     </tr>
     <tr *ngFor="let item of employee; index as i">
-      <td>{{i+1}}</td>
+      <td>{{i + 1}}</td>
       <td>{{item.name}}</td>
       <td>{{item.date}}</td>
       <td>{{item.email}}</td>
       <td>{{item.phone}}</td>
       <td>{{item.position}}</td>
-      <td><button [routerLink]="['/employee/update', item.cccd]">Update</button></td>
-      <td><button (click)="delete(item.cccd)" >Delete</button></td>
+      <td>
+        <button [routerLink]="['/employee/update', item.id]">Update</button>
+      </td>
+      <td>
+        <button (click)="delete(item.id)">Delete</button>
+      </td>
     </tr>
   </table>
   <h5><a routerLink="/employee/create">Create new employee</a></h5>
