@@ -1,0 +1,15 @@
+<div class="container">
+  <div>
+    <h1>Create form</h1>
+    <form [formGroup]="model" (ngSubmit)="save()">
+      <div class="input-group mb-3">
+        <span class="input-group-text" >Name</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username" formControlName="name">
+      </div>
+      <div *ngIf="!model.get('name').valid && model.get('name').touched">
+        test validate
+      </div>
+      <button [disabled]="!model.valid" type="submit">Ceate</button>
+    </form>
+  </div>
+</div>
