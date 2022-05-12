@@ -3,7 +3,6 @@ import {FormControl, FormControlName, FormGroup, Validators} from '@angular/form
 import {ServiceEmployeeService} from '../service/service-employee.service';
 import {Router} from '@angular/router';
 import {Subscription} from 'rxjs';
-import validate = WebAssembly.validate;
 import {PositionServerService} from '../service/position-server.service';
 import {IPositionEmployee} from '../model/IPositionEmployee';
 import {LevelSericeService} from '../service/level-serice.service';
@@ -17,8 +16,8 @@ import {ILevelEmployee} from '../model/ILevelEmployee';
 export class CreateEmployeeComponent implements OnInit {
   employee: FormGroup;
   private subscription: Subscription;
-  private position: IPositionEmployee[];
-  private level: ILevelEmployee[];
+   position: IPositionEmployee[];
+   level: ILevelEmployee[];
 
   constructor(
     private _service: ServiceEmployeeService,
@@ -36,7 +35,7 @@ export class CreateEmployeeComponent implements OnInit {
       this.level = data;
       console.log(this.level);
     }, error => {
-      console.log("error");
+      console.log('error');
     });
     this.employee = new FormGroup(
       {

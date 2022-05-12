@@ -29,18 +29,11 @@ export class FuramaEmployeeComponent implements OnInit {
   }
 
   delete(id: number) {
-    let check = true;
-    check = confirm('Ban co muon xoa');
-    if (check) {
-      this.service.delete(id).subscribe(() => {
-        console.log('success');
-        this.ngOnInit();
-        // location.reload();
-      }, error => {
-        console.log('error');
-      });
-    } else {
-      alert('Ban khong xoa');
-    }
+    this.service.delete(id).subscribe(() => {
+      console.log('success');
+      this.ngOnInit();
+    }, error => {
+      console.log('error');
+    });
   }
 }
