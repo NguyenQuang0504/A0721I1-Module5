@@ -3,12 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4dc34911-fd4c-4927-85e1-f64d51781cad" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/create-employee/create-employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/create-employee/create-employee.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/furama-employee/furama-employee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/furama-employee/furama-employee.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/app/furama-employee/furama-employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/app/furama-employee/furama-employee.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/data/employee-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/data/employee-data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CaseStudyAngular/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/CaseStudyAngular/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam_module_5/ExamAngular/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam_module_5/ExamAngular/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam_module_5/ExamAngular/src/app/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam_module_5/ExamAngular/src/app/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../exam_module_5/ExamAngular/src/service/service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../exam_module_5/ExamAngular/src/service/service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ss7_ket_noi_backend/baitap/ung_dung_todo" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -71,6 +68,7 @@
       <workItem from="1652343851632" duration="4569000" />
       <workItem from="1652356596856" duration="3598000" />
       <workItem from="1652360517075" duration="45000" />
+      <workItem from="1652404721521" duration="1068000" />
     </task>
     <servers />
   </component>
@@ -78,10 +76,10 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1652360543929">
+    <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1652406929921">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1652360543929" />
+    <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1652406929921" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1652344053853">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

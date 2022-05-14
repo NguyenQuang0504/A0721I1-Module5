@@ -44,5 +44,35 @@
       "position": "Phuc vu",
       "salary": "15000000"
     }
+  ],
+  "level": [
+    {"id": 1, "nameLevel": "Trung Cap"},
+    {"id": 2, "nameLevel": "Cao Dang"},
+    {"id": 3, "nameLevel": "Dai hoc"},
+    {"id": 4, "nameLevel": "Sau Dai Hoc"}
+  ],
+  "position": [
+    {"id": 1, "namePosition": "Le tan"},
+    {"id": 2, "namePosition": "Phuc vu"},
+    {"id": 3, "namePosition": "Chuyen vien"},
+    {"id": 4, "namePosition": "Giam sat"},
+    {"id": 5, "namePosition": "Quan ly"},
+    {"id": 6, "namePosition": "Giam doc"}
+  ],
+  "villa": [
+    {"id": 1, "name": "villa","area": 1000, "cost": 1200,"numPeople": 10, "type": "year", "style": "Phong don", "facility": "Phong co may lanh", "aeraPool": 500, "numFloor": 10},
+    {"id": 2, "name": "villa2","area": 1200, "cost": 1000,"numPeople": 10, "type": "month", "style": "Phong don", "facility": "Phong co khan giay", "aeraPool": 500, "numFloor": 10},
+    {"id": 3, "name": "villa3","area": 1200, "cost": 1000,"numPeople": 10, "type": "day", "style": "Phong don", "facility": "Phong co tu lanh", "aeraPool": 500, "numFloor": 5}
+  ],
+  "house": [
+    {"id": 1, "name": "house1","area": 1000, "cost": 1200,"numPeople": 10, "type": "year","style": "Phong don", "facility": "Phong co may lanh", "numFloor": 10},
+    {"id": 1, "name": "house2","area": 1000, "cost": 1200,"numPeople": 10, "type": "year","style": "Phong don", "facility": "Phong co may lanh", "numFloor": 10},
+    {"id": 1, "name": "house3","area": 1000, "cost": 1200,"numPeople": 10, "type": "year","style": "Phong don", "facility": "Phong co may lanh", "numFloor": 10},
+    {"id": 1, "name": "house4","area": 1000, "cost": 1200,"numPeople": 10, "type": "year","style": "Phong don", "facility": "Phong co may lanh", "numFloor": 10}
+  ],
+  "room": [
+    {"id": 1, "name": "room1","area": 1000, "cost": 1200,"numPeople": 10, "type": "year", "serviceFree": "Do an sang"},
+    {"id": 1, "name": "room2","area": 1000, "cost": 1200,"numPeople": 10, "type": "year","serviceFree": "Do an sang"},
+    {"id": 1, "name": "room3","area": 1000, "cost": 1200,"numPeople": 10, "type": "year","serviceFree": "Do an sang"}
   ]
 }

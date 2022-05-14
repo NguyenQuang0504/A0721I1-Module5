@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   ): void {
     this.service.getAll().subscribe(data=>{
       this.model = data;
+      console.log(this.model);
     }, error => {
       console.log("errors");
     })

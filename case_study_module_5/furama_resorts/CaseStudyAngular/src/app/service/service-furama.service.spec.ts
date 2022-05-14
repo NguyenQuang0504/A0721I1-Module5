@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { LevelSericeService } from './level-serice.service';
+import { ServiceFuramaService } from './service-furama.service';
 
-describe('LevelSericeService', () => {
-  let service: LevelSericeService;
+describe('ServiceFuramaService', () => {
+  let service: ServiceFuramaService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(LevelSericeService);
+    service = TestBed.inject(ServiceFuramaService);
   });
 
   it('should be created', () => {
