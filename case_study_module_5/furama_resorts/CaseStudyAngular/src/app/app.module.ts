@@ -13,6 +13,7 @@ import { EmployeeUpdateComponent } from './employee-update/employee-update.compo
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CreateEmployeeComponent } from './create-employee/create-employee.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { ServiceUpdateComponent } from './service-update/service-update.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
     FuramaEmployeeComponent,
     FuramaCustomerComponent,
     EmployeeUpdateComponent,
-    CreateEmployeeComponent
+    CreateEmployeeComponent,
+    ServiceUpdateComponent
   ],
   imports: [
     BrowserModule,

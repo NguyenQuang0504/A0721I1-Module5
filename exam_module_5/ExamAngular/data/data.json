@@ -1,16 +1,3 @@
 {
-  "model": [
-    {
-      "id": 1,
-      "name": "Quang"
-    },
-    {
-      "id": 2,
-      "name": "Thuy"
-    },
-    {
-      "id": 3,
-      "name": "4444"
-    }
-  ]
+  "model": []
 }

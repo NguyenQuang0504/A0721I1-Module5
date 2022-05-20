@@ -18,7 +18,7 @@ export class ProductUpdateComponent implements OnInit {
   product: IProduct;
   product1:FormGroup;
   category:ICategory[] = [];
-
+  productUpdate: IProduct;
   constructor(
     private _service:ProductServiceService,
     private _activated: ActivatedRoute,
@@ -54,10 +54,21 @@ export class ProductUpdateComponent implements OnInit {
   }
 
   update() {
-    this._service.update(this.product1.value.id, this.product1.value).subscribe(()=>{
-        this._router.navigateByUrl('/product');
-      },
-      error => {console.log("errors");}
-      );
+    this._service.update(this.product1.value.id, this.product1.value).subscribe(() => {
+      console.log('success');
+      this._router.navigateByUrl('/product');
+    })
+    // this.productUpdate = this.product1.value;
+    // this._serviceCategory.getCategoryByID(this.product1.value.category).subscribe(data => {
+    //   this.productUpdate.category = data;
+    //   console.log(this.productUpdate.category);
+    //   console.log(this.productUpdate);
+    // });
+    //
+    // this._service.update(this.product1.value.id, this.productUpdate).subscribe(() => {
+    //     this._router.navigateByUrl('/product');
+    //   },
+    //   error => {console.log("errors");}
+    //   );
   }
 }

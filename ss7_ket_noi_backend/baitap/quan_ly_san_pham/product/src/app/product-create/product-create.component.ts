@@ -5,6 +5,7 @@ import {Router} from "@angular/router";
 import {Subscription} from "rxjs";
 import {CategoryServiceService} from "../service/category-service.service";
 import {ICategory} from "../ICategory";
+import {IProduct} from "../IProduct";
 
 @Component({
   selector: 'app-product-create',
@@ -15,6 +16,7 @@ export class ProductCreateComponent implements OnInit {
   private subscription: Subscription;
   product: FormGroup;
   category: ICategory[] = [];
+  productCreate: IProduct;
 
   constructor(
     private _service: ProductServiceService,
@@ -26,7 +28,7 @@ export class ProductCreateComponent implements OnInit {
   ngOnInit(): void {
     this._serviceCategory.getAll().subscribe(data => {
       this.category = data;
-      console.log(data);
+      console.log(this.category[0]);
     }, error => {
       console.log("errors");
     })
@@ -40,14 +42,11 @@ export class ProductCreateComponent implements OnInit {
       }
     )
   }
-
+// ^([0-9]{10}|[0-9]{12})$ sdt
   save() {
-    this._service.save(this.product.value).subscribe(() => {
-        this._router.navigateByUrl('/product');
-      },
-      error => {
-        console.log("errors");
-      },
-    );
+    this._service.save(this.product.value).subscribe( () => {
+      console.log("success");
+      this._router.navigateByUrl('/product');
+    })
   }
 }

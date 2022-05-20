@@ -10,13 +10,12 @@ const
   providedIn: 'root'
 })
 export class ProductServiceService {
-  products: IProduct[] = [];
 
   constructor(private _httpClient: HttpClient) {
   }
-
-  getAll(): Observable<IProduct[]> {
-    return this._httpClient.get<IProduct[]>(API_URL + '/product');
+// getAll sort and paging
+  getAll(page:number): Observable<IProduct[]> {
+    return this._httpClient.get<IProduct[]>(API_URL + '/product' +'?_page=' +page +'&_limit=3&_sort=price&_order=asc');
   }
 
   save(value): Observable<IProduct> {
@@ -34,4 +33,10 @@ export class ProductServiceService {
   delete(id: number): Observable<IProduct> {
     return this._httpClient.delete<IProduct>(API_URL + '/product/' + id);
   }
+  search(value1: string, value2:string):Observable<IProduct[]>{
+    return this._httpClient.get<IProduct[]>(API_URL +'/product' +'?name_like=' +value1 +'&price_like=' +value2);
+  }
+  // sort():Observable<IProduct[]>{
+  //   return this._httpClient.get<IProduct[]>(API_URL +'/product' +'?_sort=price&_order=asc');
+  // }
 }

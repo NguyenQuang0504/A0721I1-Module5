@@ -1,0 +1,66 @@
+<div class="container" *ngIf="service">
+  <h3>Create</h3>
+  <form>
+    <input type="hidden" [value]="id" >
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text">Name</span>
+      <input [(ngModel)]="service.name" type="text" class="form-control" aria-label="Sizing example input" >
+    </div>
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" >Area</span>
+      <input [(ngModel)]="service.area" type="date" class="form-control" aria-label="Sizing example input" >
+    </div>
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" >Cost</span>
+      <input [(ngModel)]="service.cost" type="text" class="form-control" aria-label="Sizing example input" >
+    </div>
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" >Number People</span>
+      <input [(ngModel)]="service.numPeople" type="text" class="form-control" aria-label="Sizing example input" >
+    </div>
+    <div class="input-group input-group-sm mb-3">
+      <span class="input-group-text" >Type</span>
+      <input [(ngModel)]="service.type" type="text" class="form-control" aria-label="Sizing example input">
+    </div>
+    <div *ngIf="name === 'room'">
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" >Service Free</span>
+        <input [(ngModel)]="service.serviceFree" type="text" class="form-control" aria-label="Sizing example input" >
+      </div>
+    </div>
+    <div *ngIf="name === 'villa'">
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" >Style</span>
+        <input [(ngModel)]="service.style" type="text" class="form-control" aria-label="Sizing example input">
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" >Facility</span>
+        <input [(ngModel)]="service.facility" type="text" class="form-control" aria-label="Sizing example input">
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" >Area Pool</span>
+        <input [(ngModel)]="service.aeraPool" type="text" class="form-control" aria-label="Sizing example input" >
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" >Number Floor</span>
+        <input [(ngModel)]="service.numFloor" type="text" class="form-control" aria-label="Sizing example input" >
+      </div>
+    </div>
+    <div *ngIf="name === 'house'">
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" >Style</span>
+        <input [(ngModel)]="service.style" type="text" class="form-control" aria-label="Sizing example input" >
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" >Facility</span>
+        <input [(ngModel)]="service.facility" type="text" class="form-control" aria-label="Sizing example input" >
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text" >Number Floor</span>
+        <input [(ngModel)]="service.numFloor" type="text" class="form-control" aria-label="Sizing example input" >
+      </div>
+    </div>
+    <button type="submit">Update</button>
+  </form>
+</div>
+

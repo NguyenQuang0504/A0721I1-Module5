@@ -1,1 +1,85 @@
-<p>update works!</p>
+<div class="container">
+  <div>
+    <h1>Update Form</h1>
+    <form [formGroup]="modelForm" (ngSubmit)="save()">
+      <div>
+        <input type="number" [value]="model.id" [(ngModel)]="model.id" hidden formControlName="id">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Ma Benh An</span>
+        <input type="text" class="form-control" placeholder="Username" [(ngModel)]="model.idBenhAn"
+               aria-label="Username" formControlName="idBenhAn" disabled>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Ma Benh Nhan</span>
+        <input type="text" class="form-control" placeholder="Username" [(ngModel)]="model.idBenhNhan"
+               aria-label="Username" formControlName="idBenhNhan" disabled>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Ten Benh Nhan</span>
+        <input type="text" class="form-control" placeholder="Username" [(ngModel)]="model.tenBenhNhan"
+               aria-label="Username" formControlName="tenBenhNhan">
+      </div>
+      <div *ngIf="!modelForm.get('tenBenhNhan').valid && modelForm.get('tenBenhNhan').touched">
+        <p *ngIf="modelForm.get('tenBenhNhan').errors.required" class="text-danger">No required</p>
+        <p *ngIf="modelForm.get('tenBenhNhan')?.errors.pattern">Khong duoc chua ky tu dac biet</p>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Ngay nhap vien</span>
+        <input type="date" class="form-control" placeholder="Username" [(ngModel)]="model.ngayNhapVien"
+               formControlName="ngayNhapVien">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Ngay ra vien</span>
+        <input type="date" class="form-control" placeholder="Username" [(ngModel)]="model.ngayRaVien"
+               formControlName="ngayRaVien">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Ly do nhap vien</span>
+        <textarea type="text" class="form-control" placeholder="Username" [(ngModel)]="model.lyDo" aria-label="Username"
+                  formControlName="lyDo"></textarea>
+      </div>
+      <div *ngIf="!modelForm.get('lyDo').valid && modelForm.get('lyDo').touched" class="text-danger">
+        No required
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Phuong phap dieu tri</span>
+        <textarea type="text" class="form-control" placeholder="Username" [(ngModel)]="model.phuongPhap"
+                  aria-label="Username" formControlName="phuongPhap"></textarea>
+      </div>
+      <div *ngIf="!modelForm.get('phuongPhap').valid && modelForm.get('phuongPhap').touched" class="text-danger">
+        No required
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Ten Bac Sy</span>
+        <input type="text" class="form-control" placeholder="Username" [(ngModel)]="model.bacSy" aria-label="Username"
+               formControlName="bacSy">
+      </div>
+      <!--Update button-->
+      <div>
+        <button type="button" class="btn btn-primary" [disabled]="!modelForm.valid" type="submit">Update</button>
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exam">
+          Return
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exam" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Popup Return</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="text-danger">Ban co muon quay lai</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" (click)="return()" data-bs-dismiss="modal">Return</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

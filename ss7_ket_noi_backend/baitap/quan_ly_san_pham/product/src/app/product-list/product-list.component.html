@@ -1,11 +1,17 @@
 <div class="container">
   <h3>List Product</h3>
+  <div class="search">
+    <span>Name</span><input type="text" placeholder="Input name" #name>
+    <span>Price</span><input type="text" pattern="Input price" #price >
+    <button (click)="searchAll(name.value, price.value)">Search</button>
+  </div>
   <table class="table">
     <tr>
       <th>#</th>
       <th>Name</th>
       <th>Price</th>
       <th>Description</th>
+      <th>Category</th>
       <th>Update</th>
       <th>Delete</th>
     </tr>
@@ -14,10 +20,19 @@
       <td>{{item.name}}</td>
       <td>{{item.price}}</td>
       <td>{{item.description}}</td>
+      <td>{{item.category}}</td>
       <td>
         <button [routerLink]="['/product/update', item.id]">Update</button>
       </td>
-      <td><button [routerLink]="['/product/delete', item.id]">Delete</button></td>
+      <td>
+        <button [routerLink]="['/product/delete', item.id]">Delete</button>
+      </td>
     </tr>
   </table>
+  <hr>
+  <div>
+    <button (click)="back()">Back</button>
+    <span>{{page}}</span>
+    <button (click)="next()">Next</button>
+  </div>
 </div>

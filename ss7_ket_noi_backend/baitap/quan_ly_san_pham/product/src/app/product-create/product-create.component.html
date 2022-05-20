@@ -3,7 +3,7 @@
   <form [formGroup]="product" (ngSubmit)="save()">
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text">Id</span>
-      <input type="text" class="form-control" aria-label="Sizing example input" formControlName="id">
+      <input type="number" class="form-control" aria-label="Sizing example input" formControlName="id">
     </div>
     <p *ngIf="!product.get('id')?.valid && product.get('id').touched" class="text-danger">Nhap id</p>
     <div class="input-group input-group-sm mb-3">
@@ -13,7 +13,7 @@
     <p *ngIf="!product.get('name')?.valid && product.get('name').touched" class="text-danger">Nhap name</p>
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text">Price</span>
-      <input type="text" class="form-control" aria-label="Sizing example input" formControlName="price">
+      <input type="number" class="form-control" aria-label="Sizing example input" formControlName="price">
     </div>
     <p *ngIf="!product.get('price')?.valid && product.get('price').touched" class="text-danger">Name price</p>
     <div class="input-group input-group-sm mb-3">
@@ -24,8 +24,8 @@
       sai</p>
     <div class="input-group input-group-sm mb-3">
       <span class="input-group-text">Category</span>
-      <select formControlName="category" id="">
-        <option *ngFor="let item of category" [value]="item.nameCategory">{{item.nameCategory}}</option>
+      <select formControlName="category">
+        <option *ngFor="let item of category" value="{{item.nameCategory}}">{{item.nameCategory}}</option>
       </select>
     </div>
     <button type="submit" [disabled]="!product.valid">Create</button>

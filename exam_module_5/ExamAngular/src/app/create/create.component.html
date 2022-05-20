@@ -6,9 +6,14 @@
         <span class="input-group-text" >Name</span>
         <input type="text" class="form-control" placeholder="Username" aria-label="Username" formControlName="name">
       </div>
+<!--      Validate-->
       <div *ngIf="!model.get('name').valid && model.get('name').touched">
-        test validate
+        <p *ngIf="model.get('name')?.errors?.required">
+          No required
+        </p>
+        <p *ngIf="model.get('name')?.errors?.pattern">Sai dinh dang</p>
       </div>
+<!--      Create button-->
       <button [disabled]="!model.valid" type="submit">Ceate</button>
     </form>
   </div>

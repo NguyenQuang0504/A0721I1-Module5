@@ -22,4 +22,10 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  delete(id:number) {
+    this.service.delete(id).subscribe(() => {
+      console.log("delete");
+      this.ngOnInit();
+    })
+  }
 }
