@@ -1,0 +1,12 @@
+<h1>Create Customer</h1>
+<form [formGroup]="customer" (ngSubmit)="submitCustomer()">
+  <div class="input-group flex-nowrap">
+    <span class="input-group-text">First Name</span>
+    <input type="text" class="form-control" placeholder="FirstName" aria-label="Username" formControlName="firstName">
+  </div>
+  <div class="input-group flex-nowrap">
+    <span class="input-group-text">Last Name</span>
+    <input type="text" class="form-control" placeholder="LastName" aria-label="Username" formControlName="lastName">
+  </div>
+  <button type="button" class="btn btn-primary" type="submit">Create</button>
+</form>

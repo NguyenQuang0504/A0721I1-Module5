@@ -1,0 +1,50 @@
+<h1>Test connect Spring</h1>
+<div>
+  <table class="table table-striped">
+    <tr>
+      <th>Id</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Detail</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let item of customers">
+      <td>{{item.id}}</td>
+      <td>{{item.firstName}}</td>
+      <td>{{item.lastName}}</td>
+      <td>
+        <div>
+          <button type="button" class="btn btn-primary"  [routerLink]="['/findById', item.id]">Detail</button>
+        </div>
+      </td>
+      <td>
+        <!-- Button trigger modal -->
+        <div>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal'+item.id">
+            Delete
+          </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" [id]="'exampleModal'+item.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <p class="text-danger">Do you want delete {{item.firstName}} {{item.lastName}}?</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="delete(item.id)" >Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <a routerLink="/create">Create new customer</a>
+</div>
+
