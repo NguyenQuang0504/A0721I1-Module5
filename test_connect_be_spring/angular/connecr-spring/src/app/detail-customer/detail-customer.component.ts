@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HomeServiceService} from "../home/home-service.service";
+import {HomeServiceService} from "../home-service.service";
 import {ICustomer} from "../model/ICustomer";
 import {ActivatedRoute} from "@angular/router";
 

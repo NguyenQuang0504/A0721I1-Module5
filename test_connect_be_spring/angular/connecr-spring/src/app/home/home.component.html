@@ -1,6 +1,28 @@
 <h1>Test connect Spring</h1>
+<!--<div class="row">-->
+<!--  <form class="d-flex">-->
+
+<!--  </form>-->
+<!--</div>-->
+
+<div class="container form-search">
+  <div class="input-group flex-nowrap">
+    <span class="input-group-text">Input</span>
+    <input #firstName type="text" id="input" class="form-control" placeholder="Input" aria-label="Username">
+  </div>
+  <br>
+  <!--  <p class="text-danger">{{mess}}</p>-->
+  <br>
+  <select #select name="select-search" id="select">
+    <option value="firstName">FirstName</option>
+    <option value="lastName">LastName</option>
+    <option value="fullName">FullName</option>
+  </select>
+  <button (click)="search(firstName.value, select.value)" type="button" class="btn btn-primary">Search</button>
+</div>
 <div>
-  <table class="table table-striped">
+  <table class="table table-dark table-striped">
+    <thead>
     <tr>
       <th>Id</th>
       <th>FirstName</th>
@@ -8,24 +30,28 @@
       <th>Detail</th>
       <th>Delete</th>
     </tr>
+    </thead>
+    <tbody>
     <tr *ngFor="let item of customers">
       <td>{{item.id}}</td>
       <td>{{item.firstName}}</td>
       <td>{{item.lastName}}</td>
       <td>
         <div>
-          <button type="button" class="btn btn-primary"  [routerLink]="['/findById', item.id]">Detail</button>
+          <button type="button" class="btn btn-primary" [routerLink]="['/findById', item.id]">Detail</button>
         </div>
       </td>
       <td>
         <!-- Button trigger modal -->
         <div>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal" [attr.data-bs-target]="'#exampleModal'+item.id">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                  [attr.data-bs-target]="'#exampleModal'+item.id">
             Delete
           </button>
         </div>
         <!-- Modal -->
-        <div class="modal fade" [id]="'exampleModal'+item.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" [id]="'exampleModal'+item.id" tabindex="-1" aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -37,14 +63,22 @@
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="delete(item.id)" >Delete</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="delete(item.id)">Delete
+                </button>
               </div>
             </div>
           </div>
         </div>
       </td>
     </tr>
+    </tbody>
   </table>
+  <div style="text-align: center">
+    <span><a href="#" (click)="back()" class="next round" id="back">&#8249;</a><span>{{page + 1}}</span><a id="next"
+                                                                                                           href="#"
+                                                                                                           (click)="next()"
+                                                                                                           class="next round">&#8250;</a></span>
+  </div>
   <a routerLink="/create">Create new customer</a>
 </div>
 

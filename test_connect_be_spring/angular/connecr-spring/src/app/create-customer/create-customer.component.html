@@ -8,5 +8,8 @@
     <span class="input-group-text">Last Name</span>
     <input type="text" class="form-control" placeholder="LastName" aria-label="Username" formControlName="lastName">
   </div>
+  <div class="mb-3">
+    <input class="form-control" type="file" id="formFileMultiple" multiple (change)="getImage($event)">
+  </div>
   <button type="button" class="btn btn-primary" type="submit">Create</button>
 </form>
