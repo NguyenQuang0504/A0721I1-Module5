@@ -3,6 +3,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {ICustomer} from "../model/ICustomer";
 import {Router} from '@angular/router';
 import {Component, OnInit} from '@angular/core';
+import {CustomName} from "../validate/CustomName";
 @Component({
   selector: 'app-create-customer',
   templateUrl: './create-customer.component.html',
@@ -22,7 +23,7 @@ export class CreateCustomerComponent implements OnInit {
     this.customer = new FormGroup(
       {
         id: new FormControl(),
-        firstName: new FormControl('', [Validators.required]),
+        firstName: new FormControl('', [Validators.required, CustomName]),
         lastName: new FormControl('', [Validators.required]),
         urlImage: new FormControl('')
       }

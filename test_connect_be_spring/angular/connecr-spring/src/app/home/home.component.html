@@ -27,6 +27,7 @@
       <th>Id</th>
       <th>FirstName</th>
       <th>LastName</th>
+      <th>Update</th>
       <th>Detail</th>
       <th>Delete</th>
     </tr>
@@ -36,6 +37,11 @@
       <td>{{item.id}}</td>
       <td>{{item.firstName}}</td>
       <td>{{item.lastName}}</td>
+      <td>
+        <div>
+          <button type="button" class="btn btn-primary" [routerLink]="['/update', item.id]">Update</button>
+        </div>
+      </td>
       <td>
         <div>
           <button type="button" class="btn btn-primary" [routerLink]="['/findById', item.id]">Detail</button>

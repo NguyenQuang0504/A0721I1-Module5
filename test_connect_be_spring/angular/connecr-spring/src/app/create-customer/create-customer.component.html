@@ -4,12 +4,21 @@
     <span class="input-group-text">First Name</span>
     <input type="text" class="form-control" placeholder="FirstName" aria-label="Username" formControlName="firstName">
   </div>
+<!--  Validate check-->
+  <div *ngIf="customer.get('firstName').touched && !customer.valid">
+    <p class="text-danger" *ngIf="customer.get('firstName').hasError('checkName')">Do dai phai lon hon 3 ky tu</p>
+    <p class="text-danger" *ngIf="customer.get('firstName').errors.required">Khong duoc de trong</p>
+  </div>
+
   <div class="input-group flex-nowrap">
     <span class="input-group-text">Last Name</span>
     <input type="text" class="form-control" placeholder="LastName" aria-label="Username" formControlName="lastName">
   </div>
+  <div *ngIf="customer.get('lastName').touched && !customer.valid">
+    <p class="text-danger" *ngIf="customer.get('lastName')?.errors?.required">Khong duoc de trong truong nay</p>
+  </div>
   <div class="mb-3">
     <input class="form-control" type="file" id="formFileMultiple" multiple (change)="getImage($event)">
   </div>
-  <button type="button" class="btn btn-primary" type="submit">Create</button>
+  <button type="button" class="btn btn-primary" type="submit" [disabled]="!customer.valid">Create</button>
 </form>

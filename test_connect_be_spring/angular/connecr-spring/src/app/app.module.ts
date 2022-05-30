@@ -7,6 +7,7 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {DetailCustomerComponent} from './detail-customer/detail-customer.component';
 import {CreateCustomerComponent} from './create-customer/create-customer.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { UpdateCustomerComponent } from './update-customer/update-customer.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     AppComponent,
     HomeComponent,
     DetailCustomerComponent,
-    CreateCustomerComponent
+    CreateCustomerComponent,
+    UpdateCustomerComponent
   ],
   imports: [
     BrowserModule,

@@ -34,4 +34,7 @@ export class HomeServiceService {
   search(input:string, attribute:string):Observable<ICustomer[]>{
     return this.httpClient.get<ICustomer[]>(API_URL +'search?input='+input +'&attribute=' +attribute)
   }
+  update(id:number, customer:ICustomer):Observable<ICustomer>{
+    return this.httpClient.put<ICustomer>(API_URL +id, customer);
+  }
 }
